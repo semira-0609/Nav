@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ig6"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar with a Search Button and Title -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:contentInsetStart="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_collapseMode="pin">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Robotic  App"
+            android:textColor="#FBFBFB"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_gravity="start"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/search"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_search"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- SearchView initially hidden -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="top"
+        android:queryHint="Search..."
+        app:iconifiedByDefault="false"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:textColor="@android:color/black" />
+
+    <!-- Main Content -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:text="Welcome to the App"
+        android:textColor="#5F38B3"
+        android:textSize="24sp" />
+
+    <!-- Main Floating Action Button (FAB) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_gravity="bottom|center_horizontal"
+        app:fabSize="normal"
+        app:backgroundTint="#F9FCFD"
+        android:layout_margin="16dp" />
+
+    <!-- First Additional Floating Action Button (Initially Hidden) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_option_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_share"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="96dp"
+        app:backgroundTint="@android:color/holo_green_light"
+        android:visibility="gone" />
+
+    <!-- Second Additional Floating Action Button (Initially Hidden) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_option_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_camera"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="176dp"
+        app:backgroundTint="@android:color/holo_red_light"
+        android:visibility="gone" />
+
+    <!-- BottomAppBar with Profile Button -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:backgroundTint="#6E4DA8">
+
+        <ImageButton
+            android:id="@+id/ic_action_name"
+            android:layout_width="58dp"
+            android:layout_height="64dp"
+            android:src="@drawable/icon2"
+            android:layout_gravity="end"
+            android:contentDescription="Profile Button"
+            android:padding="1dp" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <!-- Menu icon on the top-right corner -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_more_vert"
+        android:contentDescription="@string/action_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

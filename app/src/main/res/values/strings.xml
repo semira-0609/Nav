@@ -1,0 +1,9 @@
+<resources>
+    <string name="car1_desc">Car 1 Description</string>
+    <string name="car2_desc">Car 2 Description</string>
+    <string name="car3_desc">Car 3 Description</string>
+    <string name="car4_desc">Car 4 Description</string>
+    <string name="app_name">EasyNavApp</string>
+    <string name="search">1</string>
+    <string name="action_menu">3</string>
+</resources>
